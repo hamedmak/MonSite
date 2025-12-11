@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôtels pour Familles - SAFARIHOO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+        }
+        .article-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .article-content {
+            line-height: 1.8;
+            color: var(--gray-dark);
+        }
+        .article-content h2 {
+            color: var(--safran);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .article-content h3 {
+            color: var(--gray-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: var(--safran);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: var(--safran-dark);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">SAFARIHOO</a></h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="vols" data-i18n="nav-vols">Vols</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="voitures" data-i18n="nav-voitures">Voitures</a></li>
+                <li><a href="promotions.html" class="nav-link" data-i18n="nav-promotions">Promotions</a></li>
+                <li><button class="ai-chat-btn" id="aiChatBtn" data-i18n="nav-ai-chat">AI Chat</button></li>
+                <li><button class="lang-btn" id="langBtn">FR</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="article-container">
+        <div class="article-header">
+            <h1 class="article-title" data-i18n="article-hotels-famille-title">Hôtels pour Familles</h1>
+            <div class="article-meta"><span data-i18n="article-published">Publié le</span> 25 janvier 2024 | <span data-i18n="article-by">Par SAFARIHOO</span></div>
+        </div>
+        
+        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=80');"></div>
+        
+        <div class="article-content">
+            <p data-i18n="article-hotels-famille-intro">Voyager en famille avec des enfants nécessite une planification particulière, surtout en ce qui concerne le choix de l'hébergement. Un bon hôtel pour familles peut faire toute la différence entre des vacances réussies et un séjour stressant. Voici nos conseils pour trouver les meilleurs hôtels adaptés aux familles.</p>
+            
+            <h2>Caractéristiques d'un bon hôtel pour familles</h2>
+            
+            <h3>1. Chambres familiales spacieuses</h3>
+            <ul>
+                <li>Chambres avec lits supplémentaires ou canapés-lits</li>
+                <li>Suites familiales avec séparation des espaces</li>
+                <li>Chambres communicantes pour plus d'intimité</li>
+                <li>Espace suffisant pour les lits bébé</li>
+            </ul>
+            
+            <h3>2. Services pour enfants</h3>
+            <ul>
+                <li>Clubs enfants avec activités supervisées</li>
+                <li>Baby-sitting disponible</li>
+                <li>Menus enfants variés</li>
+                <li>Piscine avec zone enfants</li>
+                <li>Terrain de jeux</li>
+                <li>Chambres avec équipements bébé (lit, chaise haute, etc.)</li>
+            </ul>
+            
+            <h3>3. Sécurité</h3>
+            <ul>
+                <li>Barrières de sécurité pour les escaliers</li>
+                <li>Piscines surveillées</li>
+                <li>Prise de courant sécurisée</li>
+                <li>Meubles aux angles arrondis</li>
+            </ul>
+            
+            <h2>Meilleures destinations pour familles</h2>
+            
+            <h3>Europe</h3>
+            <ul>
+                <li><strong>Disneyland Paris</strong> : Hôtels thématiques avec services dédiés aux enfants</li>
+                <li><strong>Côte d'Azur</strong> : Nombreux hôtels familiaux avec clubs enfants</li>
+                <li><strong>Alpes</strong> : Stations de ski avec hôtels adaptés aux familles</li>
+                <li><strong>Espagne</strong> : Hôtels all-inclusive avec animations pour enfants</li>
+            </ul>
+            
+            <h3>Amérique du Nord</h3>
+            <ul>
+                <li><strong>Orlando, Floride</strong> : Hôtels près des parcs d'attractions</li>
+                <li><strong>San Diego, Californie</strong> : Hôtels avec accès aux plages et zoos</li>
+                <li><strong>Montréal, Canada</strong> : Hôtels centraux avec activités familiales</li>
+            </ul>
+            
+            <h3>Asie</h3>
+            <ul>
+                <li><strong>Tokyo Disney Resort</strong> : Hôtels thématiques</li>
+                <li><strong>Singapour</strong> : Hôtels avec piscines et activités pour enfants</li>
+                <li><strong>Thaïlande</strong> : Resorts familiaux avec clubs enfants</li>
+            </ul>
+            
+            <h2>Conseils pour réserver</h2>
+            
+            <h3>1. Réservez tôt</h3>
+            <p>Les chambres familiales sont souvent limitées et se remplissent rapidement, surtout pendant les vacances scolaires.</p>
+            
+            <h3>2. Vérifiez les politiques</h3>
+            <ul>
+                <li>Age minimum pour les clubs enfants</li>
+                <li>Frais supplémentaires pour les lits supplémentaires</li>
+                <li>Politique d'annulation flexible</li>
+                <li>Repas gratuits pour les enfants</li>
+            </ul>
+            
+            <h3>3. Demandez des détails</h3>
+            <p>N'hésitez pas à contacter l'hôtel directement pour poser des questions spécifiques sur vos besoins familiaux.</p>
+            
+            <h2>Chaînes d'hôtels recommandées pour familles</h2>
+            <ul>
+                <li><strong>Club Med</strong> : Spécialisé dans les vacances familiales avec clubs enfants</li>
+                <li><strong>Disney Hotels</strong> : Expérience magique pour toute la famille</li>
+                <li><strong>Beaches Resorts</strong> : All-inclusive avec services pour enfants</li>
+                <li><strong>Four Seasons</strong> : Services de luxe pour familles</li>
+                <li><strong>Hilton</strong> : Nombreux établissements avec services familiaux</li>
+            </ul>
+            
+            <h2>Économies pour les familles</h2>
+            <ul>
+                <li>Recherchez les offres "enfants gratuits"</li>
+                <li>Profitez des forfaits all-inclusive</li>
+                <li>Réservez en basse saison pour de meilleurs prix</li>
+                <li>Utilisez les programmes de fidélité</li>
+                <li>Comparez les prix sur plusieurs sites</li>
+            </ul>
+            
+            <p data-i18n="article-hotels-famille-conclusion">En choisissant le bon hôtel, vous pouvez créer des souvenirs inoubliables pour toute la famille. Prenez le temps de bien rechercher et n'hésitez pas à poser des questions pour vous assurer que l'hôtel répond à tous vos besoins familiaux.</p>
+            
+            <a href="index.html#astuces" class="back-btn" data-i18n="article-back">← Retour aux astuces</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

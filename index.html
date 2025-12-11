@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFARIHOO - Votre Compagnon de Voyage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SAFARIHOO</h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="#accueil" class="nav-link" data-search-tab="vols" data-i18n="nav-vols">Vols</a></li>
+                <li><a href="#accueil" class="nav-link" data-search-tab="hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                <li><a href="#accueil" class="nav-link" data-search-tab="voitures" data-i18n="nav-voitures">Voitures</a></li>
+                <li><a href="promotions.html" class="nav-link" data-i18n="nav-promotions">Promotions</a></li>
+                <li><button class="ai-chat-btn" id="aiChatBtn" data-i18n="nav-ai-chat">AI Chat</button></li>
+                <li><button class="lang-btn" id="langBtn">FR</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Section Héro -->
+    <section class="hero" id="accueil">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-title" data-i18n="hero-title">Explorez le Monde avec SAFARIHOO</h2>
+            <p class="hero-subtitle" data-i18n="hero-subtitle">Trouvez les meilleures offres pour vos voyages</p>
+            
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="search-tab active" data-tab="vols" data-i18n="search-tab-vols">Vols</button>
+                    <button class="search-tab" data-tab="hotels" data-i18n="search-tab-hotels">Hôtels</button>
+                    <button class="search-tab" data-tab="voitures" data-i18n="search-tab-voitures">Voitures</button>
+                </div>
+                
+                <div class="search-box" id="searchBox">
+                    <!-- Vols Search -->
+                    <div class="search-content active" id="vols-search">
+                        <div class="search-field">
+                            <label data-i18n="search-origin">Ville de départ</label>
+                            <input type="text" id="vols-origin" data-i18n="search-origin" placeholder="Ville de départ">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-destination">Destination</label>
+                            <input type="text" id="vols-destination" data-i18n="search-destination" placeholder="Destination">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-departure">Date départ</label>
+                            <input type="date" id="vols-departure">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-return">Date retour</label>
+                            <input type="date" id="vols-return">
+                        </div>
+                        <div class="search-field passengers-field">
+                            <label data-i18n="search-passengers">Passagers & Classe</label>
+                            <div class="passengers-selector" id="passengersSelector">
+                                <div class="passengers-display" id="passengersDisplay">
+                                    <span id="passengersText" data-i18n="search-passengers-text">1 passager, Économie</span>
+                                    <span class="arrow-down">▼</span>
+                                </div>
+                                <div class="passengers-dropdown" id="passengersDropdown">
+                                    <div class="passengers-section">
+                                        <h4 data-i18n="search-passengers-label">Nombre de passagers</h4>
+                                        <div class="passenger-type">
+                                            <div class="passenger-info">
+                                                <span class="passenger-label" data-i18n="search-adults">Adultes</span>
+                                                <span class="passenger-age" data-i18n="search-adults-age">12 ans et plus</span>
+                                            </div>
+                                            <div class="passenger-controls">
+                                                <button type="button" class="passenger-btn minus" data-type="adults" data-action="decrease">−</button>
+                                                <span class="passenger-count" id="adultsCount">1</span>
+                                                <button type="button" class="passenger-btn plus" data-type="adults" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="passenger-type">
+                                            <div class="passenger-info">
+                                                <span class="passenger-label" data-i18n="search-children">Enfants</span>
+                                                <span class="passenger-age" data-i18n="search-children-age">2-11 ans</span>
+                                            </div>
+                                            <div class="passenger-controls">
+                                                <button type="button" class="passenger-btn minus" data-type="children" data-action="decrease">−</button>
+                                                <span class="passenger-count" id="childrenCount">0</span>
+                                                <button type="button" class="passenger-btn plus" data-type="children" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="passenger-type">
+                                            <div class="passenger-info">
+                                                <span class="passenger-label" data-i18n="search-infants">Bébés</span>
+                                                <span class="passenger-age" data-i18n="search-infants-age">Moins de 2 ans</span>
+                                            </div>
+                                            <div class="passenger-controls">
+                                                <button type="button" class="passenger-btn minus" data-type="infants" data-action="decrease">−</button>
+                                                <span class="passenger-count" id="infantsCount">0</span>
+                                                <button type="button" class="passenger-btn plus" data-type="infants" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="class-section">
+                                        <h4 data-i18n="search-class">Classe</h4>
+                                        <div class="class-options">
+                                            <label class="class-option">
+                                                <input type="radio" name="flightClass" value="economy" checked>
+                                                <span data-i18n="search-class-economy">Économie</span>
+                                            </label>
+                                            <label class="class-option">
+                                                <input type="radio" name="flightClass" value="comfort">
+                                                <span data-i18n="search-class-comfort">Confort</span>
+                                            </label>
+                                            <label class="class-option">
+                                                <input type="radio" name="flightClass" value="business">
+                                                <span data-i18n="search-class-business">Affaires</span>
+                                            </label>
+                                            <label class="class-option">
+                                                <input type="radio" name="flightClass" value="first">
+                                                <span data-i18n="search-class-first">Première</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="search-btn" onclick="searchFlights()" data-i18n="search-btn-vols">Rechercher des vols</button>
+                    </div>
+                    
+                    <!-- Hôtels Search -->
+                    <div class="search-content" id="hotels-search">
+                        <div class="search-field">
+                            <label data-i18n="search-destination">Destination</label>
+                            <input type="text" id="hotels-destination" data-i18n="search-hotel-destination" placeholder="Où allez-vous?">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-hotel-checkin">Arrivée</label>
+                            <input type="date" id="hotels-checkin">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-hotel-checkout">Départ</label>
+                            <input type="date" id="hotels-checkout">
+                        </div>
+                        <div class="search-field guests-field">
+                            <label data-i18n="search-hotel-guests">Chambres & Personnes</label>
+                            <div class="guests-selector" id="guestsSelector">
+                                <div class="guests-display" id="guestsDisplay">
+                                    <span id="guestsText" data-i18n="search-hotel-guests-text">2 chambres, 2 adultes, 0 enfants</span>
+                                    <span class="arrow-down">▼</span>
+                                </div>
+                                <div class="guests-dropdown" id="guestsDropdown">
+                                    <div class="guests-section">
+                                        <h4 data-i18n="search-hotel-rooms">Chambres</h4>
+                                        <div class="guest-type">
+                                            <div class="guest-info">
+                                                <span class="guest-label" data-i18n="search-hotel-rooms-label">Nombre de chambres</span>
+                                            </div>
+                                            <div class="guest-controls">
+                                                <button type="button" class="guest-btn minus" data-type="rooms" data-action="decrease">−</button>
+                                                <span class="guest-count" id="roomsCount">2</span>
+                                                <button type="button" class="guest-btn plus" data-type="rooms" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="guests-section">
+                                        <h4 data-i18n="search-hotel-adults">Personnes</h4>
+                                        <div class="guest-type">
+                                            <div class="guest-info">
+                                                <span class="guest-label" data-i18n="search-hotel-adults">Adultes</span>
+                                                <span class="guest-age" data-i18n="search-hotel-adults-age">18 ans et plus</span>
+                                            </div>
+                                            <div class="guest-controls">
+                                                <button type="button" class="guest-btn minus" data-type="adults" data-action="decrease">−</button>
+                                                <span class="guest-count" id="hotelsAdultsCount">2</span>
+                                                <button type="button" class="guest-btn plus" data-type="adults" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="guest-type">
+                                            <div class="guest-info">
+                                                <span class="guest-label" data-i18n="search-hotel-children">Enfants</span>
+                                                <span class="guest-age" data-i18n="search-hotel-children-age">0-17 ans</span>
+                                            </div>
+                                            <div class="guest-controls">
+                                                <button type="button" class="guest-btn minus" data-type="children" data-action="decrease">−</button>
+                                                <span class="guest-count" id="hotelsChildrenCount">0</span>
+                                                <button type="button" class="guest-btn plus" data-type="children" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="guests-actions">
+                                        <button type="button" class="guests-done-btn" id="guestsDoneBtn" data-i18n="search-hotel-done">Terminé</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="search-btn" onclick="searchHotels()" data-i18n="search-btn-hotels">Rechercher</button>
+                    </div>
+                    
+                    <!-- Voitures Search -->
+                    <div class="search-content" id="voitures-search">
+                        <div class="search-field">
+                            <label data-i18n="search-car-pickup">Lieu de ramassage</label>
+                            <input type="text" id="voitures-pickup" data-i18n="search-car-pickup-placeholder" placeholder="Ville ou aéroport">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-car-pickup-date">Date de ramassage</label>
+                            <input type="date" id="voitures-pickup-date">
+                        </div>
+                        <div class="search-field">
+                            <label data-i18n="search-car-return-date">Date retour</label>
+                            <input type="date" id="voitures-return-date">
+                        </div>
+                        <button class="search-btn" onclick="searchCars()" data-i18n="search-btn-cars">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Astuces de Voyage -->
+    <section class="travel-tips" id="astuces">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="tips-title">Astuces de Voyage</h2>
+                <p class="section-subtitle" data-i18n="tips-subtitle">Découvrez nos guides pratiques pour voyager en toute sérénité</p>
+            </div>
+            
+            <div class="tips-grid">
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-animals-title">Voyager avec un Animal</h3>
+                        <p data-i18n="tip-animals-desc">Conseils essentiels pour voyager avec votre compagnon à quatre pattes en toute sécurité et confort.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('animaux')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-hotels-animals-title">Hôtels qui Acceptent les Animaux</h3>
+                        <p data-i18n="tip-hotels-animals-desc">Découvrez comment trouver les meilleurs hôtels accueillant vos animaux de compagnie.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('hotels-animaux')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-families-title">Hôtels pour Familles</h3>
+                        <p data-i18n="tip-families-desc">Les meilleures destinations et hôtels adaptés aux voyages en famille avec enfants.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('hotels-famille')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-long-flight-title">Conseils pour Vols Long Courrier</h3>
+                        <p data-i18n="tip-long-flight-desc">Comment rendre vos longs trajets en avion plus confortables et agréables.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('vols-long-courrier')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-suitcase-title">Préparer sa Valise</h3>
+                        <p data-i18n="tip-suitcase-desc">Guide complet pour préparer votre valise selon votre destination et la durée du voyage.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('valise')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+                
+                <article class="tip-card" data-tilt>
+                    <div class="tip-image" style="background-image: url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80');">
+                    </div>
+                    <div class="tip-content">
+                        <h3 data-i18n="tip-responsible-title">Voyager Responsable</h3>
+                        <p data-i18n="tip-responsible-desc">Découvrez comment voyager de manière éco-responsable et respectueuse de l'environnement.</p>
+                        <button class="tip-btn" onclick="redirectToArticle('voyage-responsable')" data-i18n="tip-animals-btn">Lire l'article</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Promotions -->
+    <section class="promotions" id="promotions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="promo-title">Promotions Exclusives</h2>
+                <p class="section-subtitle" data-i18n="promo-subtitle">Profitez de nos meilleures offres du moment</p>
+                <a href="promotions.html" class="view-all-btn" data-i18n="promo-view-all">Voir toutes les promotions →</a>
+            </div>
+            
+            <div class="promo-grid">
+                <div class="promo-card" data-tilt>
+                    <div class="promo-badge">-30%</div>
+                    <div class="promo-image promo-1" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80');"></div>
+                    <div class="promo-content">
+                        <h3 data-i18n="promo-europe-title">Vols vers l'Europe</h3>
+                        <p data-i18n="promo-europe-desc">Profitez de réductions exceptionnelles sur vos vols vers les plus belles destinations européennes.</p>
+                        <div class="promo-price">
+                            <span class="old-price">599€</span>
+                            <span class="new-price">419€</span>
+                        </div>
+                        <button class="promo-btn" onclick="window.location.href='promotions.html?filter=vols'" data-i18n="promo-europe-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+                
+                <div class="promo-card" data-tilt>
+                    <div class="promo-badge">-25%</div>
+                    <div class="promo-image promo-2" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');"></div>
+                    <div class="promo-content">
+                        <h3 data-i18n="promo-hotels-title">Hôtels de Luxe</h3>
+                        <p data-i18n="promo-hotels-desc">Offres spéciales sur une sélection d'hôtels 5 étoiles dans le monde entier.</p>
+                        <div class="promo-price">
+                            <span class="old-price">200€/nuit</span>
+                            <span class="new-price">150€/nuit</span>
+                        </div>
+                        <button class="promo-btn" onclick="window.location.href='promotions.html?filter=hotels'" data-i18n="promo-europe-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+                
+                <div class="promo-card" data-tilt>
+                    <div class="promo-badge">-20%</div>
+                    <div class="promo-image promo-3" style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80');"></div>
+                    <div class="promo-content">
+                        <h3 data-i18n="promo-cars-title">Location de Voitures</h3>
+                        <p data-i18n="promo-cars-desc">Économisez sur vos locations de voitures pour vos prochaines vacances.</p>
+                        <div class="promo-price">
+                            <span class="old-price">50€/jour</span>
+                            <span class="new-price">40€/jour</span>
+                        </div>
+                        <button class="promo-btn" onclick="window.location.href='promotions.html?filter=voitures'" data-i18n="promo-europe-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAFARIHOO</h3>
+                    <p data-i18n="footer-desc">Votre compagnon de voyage de confiance. Nous vous aidons à découvrir le monde avec les meilleures offres.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15hPHLinfE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/Safarihoo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@Safarihoo?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon youtube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.pinterest.com/safarihoo/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-icon pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-services">Services</h4>
+                    <ul>
+                        <li><a href="#vols" data-i18n="nav-vols">Vols</a></li>
+                        <li><a href="#hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                        <li><a href="#voitures" data-i18n="nav-voitures">Voitures</a></li>
+                        <li><a href="promotions.html" data-i18n="nav-promotions">Promotions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-info">Informations</h4>
+                    <ul>
+                        <li><a href="#astuces" data-i18n="tips-title">Astuces de Voyage</a></li>
+                        <li><a href="#" data-i18n="footer-about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer-faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-legal">Légal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer-legal-mentions">Mentions légales</a></li>
+                        <li><a href="#" data-i18n="footer-legal-privacy">Politique de confidentialité</a></li>
+                        <li><a href="#" data-i18n="footer-legal-terms">Conditions d'utilisation</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAFARIHOO. <span data-i18n="footer-copyright">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Modal -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3 data-i18n="chat-title">AI Chat Assistant</h3>
+                <button class="close-chat" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <p data-i18n="chat-welcome">Bonjour ! Je suis votre assistant de voyage. Comment puis-je vous aider aujourd'hui ?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" data-i18n="chat-placeholder" placeholder="Tapez votre message...">
+                <button id="sendChat" data-i18n="chat-send">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

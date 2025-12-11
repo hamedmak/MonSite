@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions - SAFARIHOO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;"><h1>SAFARIHOO</h1></a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="vols" data-i18n="nav-vols">Vols</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="voitures" data-i18n="nav-voitures">Voitures</a></li>
+                <li><a href="promotions.html" class="nav-link active" data-i18n="nav-promotions">Promotions</a></li>
+                <li><button class="ai-chat-btn" id="aiChatBtn" data-i18n="nav-ai-chat">AI Chat</button></li>
+                <li><button class="lang-btn" id="langBtn">FR</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Promotions Hero -->
+    <section class="promotions-hero">
+        <div class="promotions-hero-background"></div>
+        <div class="promotions-hero-content">
+            <h1 class="promotions-title" data-i18n="promo-page-title">Promotions Exclusives</h1>
+            <p class="promotions-subtitle" data-i18n="promo-page-subtitle">Découvrez nos meilleures offres et économisez sur vos prochains voyages</p>
+        </div>
+    </section>
+
+    <!-- All Promotions Section -->
+    <section class="all-promotions">
+        <div class="container">
+            <div class="promotions-filters">
+                <button class="filter-btn active" data-filter="all" data-i18n="promo-filter-all">Toutes</button>
+                <button class="filter-btn" data-filter="vols" data-i18n="promo-filter-vols">Vols</button>
+                <button class="filter-btn" data-filter="hotels" data-i18n="promo-filter-hotels">Hôtels</button>
+                <button class="filter-btn" data-filter="voitures" data-i18n="promo-filter-voitures">Voitures</button>
+                <button class="filter-btn" data-filter="packages" data-i18n="promo-filter-packages">Packages</button>
+            </div>
+
+            <div class="promotions-grid-extended">
+                <!-- Promotion 1: Everyday Escape -->
+                <div class="promo-card-extended" data-category="packages" data-tilt>
+                    <div class="promo-badge-large">🔥</div>
+                    <div class="promo-image promo-1" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-everyday-category">Échappées Quotidiennes</span>
+                        <h3 data-i18n="promo-everyday-title">Everyday Escape</h3>
+                        <p data-i18n="promo-everyday-desc">Profitez d'offres exceptionnelles chaque jour ! Des promotions quotidiennes sur les vols, hôtels et packages pour satisfaire toutes vos envies de voyage.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">📅</span>
+                                <span data-i18n="promo-everyday-daily">Offres quotidiennes renouvelées</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🌍</span>
+                                <span data-i18n="promo-everyday-destinations">Destinations mondiales</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span data-i18n="promo-everyday-prices">Meilleurs prix garantis</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="new-price" data-i18n="promo-everyday-exclusive">Promotions exclusives</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/sale/w/28065/everydayescape.html?locale=en-SG&promo_referer=3371_28065_1&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252645', '_blank')" data-i18n="promo-everyday-btn">Découvrir les offres</button>
+                    </div>
+                </div>
+
+                <!-- Promotion 2: Holiday Deals 2025 -->
+                <div class="promo-card-extended" data-category="packages" data-tilt>
+                    <div class="promo-badge-large">-40%</div>
+                    <div class="promo-image promo-2" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-holiday-category">Vacances 2025</span>
+                        <h3 data-i18n="promo-holiday-title">Holiday Deals 2025</h3>
+                        <p data-i18n="promo-holiday-desc">Préparez vos vacances 2025 dès maintenant ! Des offres incroyables sur les packages vacances, vols et hôtels pour toute l'année. Réservez tôt et économisez !</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">📅</span>
+                                <span data-i18n="promo-holiday-valid">Valable toute l'année 2025</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">✈️</span>
+                                <span data-i18n="promo-holiday-included">Vols + Hôtels inclus</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🎁</span>
+                                <span data-i18n="promo-holiday-benefits">Avantages exclusifs</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="old-price">999€</span>
+                            <span class="new-price">599€</span>
+                            <span class="price-note" data-i18n="promo-holiday-per-person">par personne</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/sale/w/27435/holidaydeals2025.html?locale=en-sg&curr=sgd&transparentBar=1&promo_referer=3371_27435_2&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252701', '_blank')" data-i18n="promo-holiday-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+
+                <!-- Promotion 3: Ads Promy -->
+                <div class="promo-card-extended" data-category="vols" data-tilt>
+                    <div class="promo-badge-large">-35%</div>
+                    <div class="promo-image promo-3" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-special-category">Promotions Spéciales</span>
+                        <h3 data-i18n="promo-special-title">Promotions Exclusives</h3>
+                        <p data-i18n="promo-special-desc">Découvrez nos promotions spéciales sur une sélection de destinations. Des réductions exceptionnelles sur les vols et séjours pour des vacances inoubliables.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">✈️</span>
+                                <span data-i18n="promo-special-flights">Vols à prix réduits</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🏨</span>
+                                <span data-i18n="promo-special-hotels">Hôtels sélectionnés</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">⭐</span>
+                                <span data-i18n="promo-special-limited">Offres limitées</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="old-price">799€</span>
+                            <span class="new-price">519€</span>
+                            <span class="price-note" data-i18n="promo-holiday-per-person">par personne</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/sale/w/14709/adspromy.html?locale=en-SG&promo_referer=3371_14709_3&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252715', '_blank')" data-i18n="promo-special-btn">Voir les offres</button>
+                    </div>
+                </div>
+
+                <!-- Promotion 4: Citi 50% Off -->
+                <div class="promo-card-extended" data-category="packages" data-tilt>
+                    <div class="promo-badge-large">-50%</div>
+                    <div class="promo-image promo-1" style="background-image: url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-citi-category">Carte Citi</span>
+                        <h3 data-i18n="promo-citi-title">50% de Réduction Citi</h3>
+                        <p data-i18n="promo-citi-desc">Détenteurs de carte Citi, profitez de 50% de réduction sur vos réservations ! Une offre exclusive pour les membres Citi avec des économies exceptionnelles.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">💳</span>
+                                <span data-i18n="promo-citi-exclusive">Exclusif carte Citi</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">💰</span>
+                                <span data-i18n="promo-citi-discount">50% de réduction</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <span data-i18n="promo-citi-limited">Offre limitée</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="old-price">1000€</span>
+                            <span class="new-price">500€</span>
+                            <span class="price-note" data-i18n="promo-citi-with-card">avec carte Citi</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/sale/w/5315/citi50off.html?locale=en-SG&curr=SGD&promo_referer=3371_5315_4&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252722', '_blank')" data-i18n="promo-citi-btn">Profiter de l'offre</button>
+                    </div>
+                </div>
+
+                <!-- Promotion 5: DBS Mon Yays -->
+                <div class="promo-card-extended" data-category="hotels" data-tilt>
+                    <div class="promo-badge-large">-30%</div>
+                    <div class="promo-image promo-2" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-dbs-category">DBS</span>
+                        <h3 data-i18n="promo-dbs-title">DBS Mon Yays</h3>
+                        <p data-i18n="promo-dbs-desc">Offres spéciales DBS ! Profitez de réductions exclusives sur les hôtels et séjours pour les détenteurs de carte DBS. Des économies sur vos prochaines escapades.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">💳</span>
+                                <span data-i18n="promo-dbs-exclusive">Exclusif carte DBS</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🏨</span>
+                                <span data-i18n="promo-dbs-selected">Hôtels sélectionnés</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🎁</span>
+                                <span data-i18n="promo-dbs-members">Avantages membres</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="old-price">200€/nuit</span>
+                            <span class="new-price">140€/nuit</span>
+                            <span class="price-note" data-i18n="promo-dbs-with-card">avec carte DBS</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/sale/w/13988/dbs-mon-yays.html?locale=en-SG&curr=SGD&promo_referer=3371_13988_5&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252729', '_blank')" data-i18n="promo-dbs-btn">Réserver maintenant</button>
+                    </div>
+                </div>
+
+                <!-- Promotion 6: Travel Ideas -->
+                <div class="promo-card-extended" data-category="packages" data-tilt>
+                    <div class="promo-badge-large">💡</div>
+                    <div class="promo-image promo-3" style="background-image: url('https://images.unsplash.com/photo-1502780402662-acc019171b0a?w=800&q=80');"></div>
+                    <div class="promo-content-extended">
+                        <span class="promo-category" data-i18n="promo-ideas-category">Inspiration</span>
+                        <h3 data-i18n="promo-ideas-title">Idées de Voyage</h3>
+                        <p data-i18n="promo-ideas-desc">Besoin d'inspiration pour votre prochain voyage ? Découvrez nos idées de voyage, destinations tendances et packages personnalisés pour créer des souvenirs inoubliables.</p>
+                        <div class="promo-details">
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🌍</span>
+                                <span data-i18n="promo-ideas-trending">Destinations tendances</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">📸</span>
+                                <span data-i18n="promo-ideas-guides">Guides de voyage</span>
+                            </div>
+                            <div class="promo-detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <span data-i18n="promo-ideas-personalized">Packages personnalisés</span>
+                            </div>
+                        </div>
+                        <div class="promo-price-extended">
+                            <span class="new-price" data-i18n="promo-ideas-discover">Découvrez nos idées</span>
+                        </div>
+                        <button class="promo-btn-extended" onclick="window.open('https://sg.trip.com/travel-ideas/channel/365?locale=en-SG&source=appanda&promo_referer=3371_null_6&Allianceid=7183828&SID=264252843&trip_sub1=&trip_sub3=P8252750', '_blank')" data-i18n="promo-ideas-btn">Explorer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAFARIHOO</h3>
+                    <p data-i18n="footer-desc">Votre compagnon de voyage de confiance. Nous vous aidons à découvrir le monde avec les meilleures offres.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/15hPHLinfE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://x.com/Safarihoo" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" class="social-icon twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@Safarihoo?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="social-icon youtube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.pinterest.com/safarihoo/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" class="social-icon pinterest">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-services">Services</h4>
+                    <ul>
+                        <li><a href="index.html#vols" data-i18n="nav-vols">Vols</a></li>
+                        <li><a href="index.html#hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                        <li><a href="index.html#voitures" data-i18n="nav-voitures">Voitures</a></li>
+                        <li><a href="promotions.html" data-i18n="nav-promotions">Promotions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-info">Informations</h4>
+                    <ul>
+                        <li><a href="index.html#astuces" data-i18n="tips-title">Astuces de Voyage</a></li>
+                        <li><a href="#" data-i18n="footer-about">À propos</a></li>
+                        <li><a href="contact.html" data-i18n="footer-contact">Contact</a></li>
+                        <li><a href="#" data-i18n="footer-faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 data-i18n="footer-legal">Légal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer-legal-mentions">Mentions légales</a></li>
+                        <li><a href="#" data-i18n="footer-legal-privacy">Politique de confidentialité</a></li>
+                        <li><a href="#" data-i18n="footer-legal-terms">Conditions d'utilisation</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SAFARIHOO. <span data-i18n="footer-copyright">Tous droits réservés.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Modal -->
+    <div class="chat-modal" id="chatModal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3 data-i18n="chat-title">AI Chat Assistant</h3>
+                <button class="close-chat" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <p data-i18n="chat-welcome">Bonjour ! Je suis votre assistant de voyage. Comment puis-je vous aider aujourd'hui ?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" data-i18n="chat-placeholder" placeholder="Tapez votre message...">
+                <button id="sendChat" data-i18n="chat-send">Envoyer</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const promoCards = document.querySelectorAll('.promo-card-extended');
+
+        // Function to apply filter
+        function applyFilter(filter) {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            const targetButton = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+            if (targetButton) {
+                targetButton.classList.add('active');
+            }
+            
+                // Filter cards
+                promoCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'none';
+                        }, 10);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'none';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+        }
+
+        // Check for filter parameter in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterParam = urlParams.get('filter');
+        
+        if (filterParam) {
+            // Apply filter from URL parameter
+            setTimeout(() => {
+                applyFilter(filterParam);
+                // Scroll to promotions section
+                const promotionsSection = document.querySelector('.all-promotions');
+                if (promotionsSection) {
+                    promotionsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+
+        // Add click listeners to filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                applyFilter(filter);
+                
+                // Update URL without reloading page
+                const newUrl = new URL(window.location);
+                if (filter === 'all') {
+                    newUrl.searchParams.delete('filter');
+                } else {
+                    newUrl.searchParams.set('filter', filter);
+                }
+                window.history.pushState({}, '', newUrl);
+            });
+        });
+    </script>
+</body>
+</html>
+

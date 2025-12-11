@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyager avec un Animal - SAFARIHOO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .article-container {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .article-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--gray-dark);
+            margin-bottom: 20px;
+        }
+        .article-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+        }
+        .article-image {
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .article-content {
+            line-height: 1.8;
+            color: var(--gray-dark);
+        }
+        .article-content h2 {
+            color: var(--safran);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .article-content h3 {
+            color: var(--gray-dark);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        .article-content p {
+            margin-bottom: 20px;
+        }
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        .article-content li {
+            margin-bottom: 10px;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: var(--safran);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            background: var(--safran-dark);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">SAFARIHOO</a></h1>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link" data-i18n="nav-accueil">Accueil</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="vols" data-i18n="nav-vols">Vols</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="hotels" data-i18n="nav-hotels">Hôtels</a></li>
+                <li><a href="index.html#accueil" class="nav-link" data-search-tab="voitures" data-i18n="nav-voitures">Voitures</a></li>
+                <li><a href="promotions.html" class="nav-link" data-i18n="nav-promotions">Promotions</a></li>
+                <li><button class="ai-chat-btn" id="aiChatBtn" data-i18n="nav-ai-chat">AI Chat</button></li>
+                <li><button class="lang-btn" id="langBtn">FR</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="article-container">
+        <div class="article-header">
+            <h1 class="article-title" data-i18n="article-animaux-title">Voyager avec un Animal</h1>
+            <div class="article-meta"><span data-i18n="article-published">Publié le</span> 15 janvier 2024 | <span data-i18n="article-by">Par SAFARIHOO</span></div>
+        </div>
+        
+        <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&q=80');"></div>
+        
+        <div class="article-content">
+            <p data-i18n="article-animaux-intro">Voyager avec votre animal de compagnie peut être une expérience enrichissante, mais cela nécessite une préparation minutieuse. Que vous partiez en avion, en train ou en voiture, voici nos conseils essentiels pour garantir un voyage sûr et confortable pour vous et votre compagnon à quatre pattes.</p>
+            
+            <h2 data-i18n="article-animaux-prepare-title">Préparer le voyage</h2>
+            <p data-i18n="article-animaux-prepare-text">Avant de partir, il est crucial de bien préparer votre animal et tous les documents nécessaires :</p>
+            
+            <h3 data-i18n="article-animaux-docs-title">Documents requis</h3>
+            <ul>
+                <li><strong data-i18n="article-animaux-docs-1">Carnet de santé à jour : Assurez-vous que toutes les vaccinations sont à jour</strong></li>
+                <li><strong data-i18n="article-animaux-docs-2">Passeport pour animal : Obligatoire pour les voyages internationaux en Europe</strong></li>
+                <li><strong data-i18n="article-animaux-docs-3">Certificat vétérinaire : Généralement requis dans les 10 jours précédant le voyage</strong></li>
+                <li><strong data-i18n="article-animaux-docs-4">Assurance voyage : Vérifiez que votre assurance couvre votre animal</strong></li>
+            </ul>
+            
+            <h3 data-i18n="article-animaux-prepare-animal-title">Préparer votre animal</h3>
+            <ul>
+                <li data-i18n="article-animaux-prepare-animal-1">Faites une visite chez le vétérinaire avant le départ</li>
+                <li data-i18n="article-animaux-prepare-animal-2">Assurez-vous que votre animal est identifié (puce électronique ou tatouage)</li>
+                <li data-i18n="article-animaux-prepare-animal-3">Entraînez votre animal à voyager dans sa caisse de transport</li>
+                <li data-i18n="article-animaux-prepare-animal-4">Préparez une trousse de secours avec les médicaments nécessaires</li>
+            </ul>
+            
+            <h2 data-i18n="article-animaux-avion-title">Voyager en avion</h2>
+            <p data-i18n="article-animaux-avion-text">Les compagnies aériennes ont des règles strictes concernant le transport d'animaux. Voici ce que vous devez savoir :</p>
+            
+            <h3 data-i18n="article-animaux-cabine-title">En cabine</h3>
+            <ul>
+                <li data-i18n="article-animaux-cabine-1">Généralement autorisé pour les petits animaux (moins de 8 kg avec la caisse)</li>
+                <li data-i18n="article-animaux-cabine-2">La caisse doit être approuvée IATA et s'adapter sous le siège devant vous</li>
+                <li data-i18n="article-animaux-cabine-3">Réservation obligatoire à l'avance (places limitées)</li>
+                <li data-i18n="article-animaux-cabine-4">Frais supplémentaires généralement entre 50€ et 150€</li>
+            </ul>
+            
+            <h3 data-i18n="article-animaux-soute-title">En soute</h3>
+            <ul>
+                <li data-i18n="article-animaux-soute-1">Pour les animaux plus grands ou certaines races</li>
+                <li data-i18n="article-animaux-soute-2">Caisse de transport rigide et ventilée obligatoire</li>
+                <li data-i18n="article-animaux-soute-3">Vérifiez les restrictions de température (certaines compagnies refusent par temps chaud)</li>
+                <li data-i18n="article-animaux-soute-4">Évitez de donner des tranquillisants sans avis vétérinaire</li>
+            </ul>
+            
+            <h2 data-i18n="article-animaux-voiture-title">Voyager en voiture</h2>
+            <p data-i18n="article-animaux-voiture-text">Pour les voyages en voiture, la sécurité est primordiale :</p>
+            <ul>
+                <li data-i18n="article-animaux-voiture-1">Utilisez une caisse de transport ou un harnais de sécurité</li>
+                <li data-i18n="article-animaux-voiture-2">Ne laissez jamais votre animal libre dans la voiture</li>
+                <li data-i18n="article-animaux-voiture-3">Faites des pauses régulières pour permettre à votre animal de se dégourdir</li>
+                <li data-i18n="article-animaux-voiture-4">Gardez toujours de l'eau fraîche à disposition</li>
+                <li data-i18n="article-animaux-voiture-5">Ne laissez jamais votre animal seul dans la voiture, surtout par temps chaud</li>
+            </ul>
+            
+            <h2 data-i18n="article-animaux-conseils-title">Conseils généraux</h2>
+            <ul>
+                <li data-i18n="article-animaux-conseils-1">Préparez une trousse de secours avec les médicaments de votre animal</li>
+                <li data-i18n="article-animaux-conseils-2">Apportez suffisamment de nourriture pour le voyage</li>
+                <li data-i18n="article-animaux-conseils-3">Emportez les jouets préférés de votre animal pour le rassurer</li>
+                <li data-i18n="article-animaux-conseils-4">Informez-vous sur les règles spécifiques de votre destination</li>
+                <li data-i18n="article-animaux-conseils-5">Prévoyez un plan B en cas d'urgence</li>
+            </ul>
+            
+            <p data-i18n="article-animaux-conclusion">En suivant ces conseils, vous et votre animal pourrez profiter d'un voyage agréable et sans stress. N'oubliez pas que chaque animal est unique, adaptez ces conseils selon les besoins spécifiques de votre compagnon.</p>
+            
+            <a href="index.html#astuces" class="back-btn" data-i18n="article-back">← Retour aux astuces</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
